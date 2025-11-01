@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Masjid Conge</title>
+<style>
+  body {
+    margin: 0;
+    background: url('flowers.jpg') no-repeat center center fixed;
+    background-size: cover;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+  }
+
+  /* Buku memenuhi layar penuh */
+  .book {
+    position: relative;
+    width: 100vw;           
+    height: 100vh;          
+    max-width: 600px;       
+    max-height: 1000px;     
+    perspective: 2000px;
+  }
+
+  .page {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    left: 0;
+    transform-origin: left center;
+    transition: transform 2s ease-in-out;
+    background: #f5f5f5;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    overflow: hidden;
+  }
+
+  .page img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;  
+    display: block;
+    border-radius: 10px;
+  }
+
+  .cover {
+    z-index: 100;
+  }
+
+  .back-cover {
+    background: lightblue;
+  }
+
+  /* Penyesuaian khusus untuk HP */
+  @media (max-width: 450px) {
+    /* Tambahan: beri jarak 0.5cm dari atas, 0.5cm dari kiri, dan 0.5cm dari bawah */
+    body {
+      height: 100dvh;
+      padding-top: 0.5cm;    /* ✅ 0.5 cm dari tepi atas Android */
+      padding-left: 1cm;   /* ✅ 1 cm dari tepi kiri Android */
+      padding-right: 0.5cm;   /* ✅ 1 cm dari tepi kiri Android */
+      padding-bottom: 0.5cm; /* ✅ 0.5 cm dari tepi bawah Android */
+      /* kanan dibiarkan sesuai sebelumnya (tidak diubah) */
+      box-sizing: border-box;
+    }
+    /* Sesuaikan ukuran .book agar tidak menutupi padding */
+    .book {
+      width: calc(100vw - 0.5cm);            /* tetap sesuai ruang kiri yang kita sisakan */
+      height: calc(100dvh - 1cm);            /* kurangi total 0.5cm top + 0.5cm bottom */
+    }
+    .page img {
+      object-fit: cover;
+    }
+  }
+</style>
+</head>
+<body>
+
+<!-- Musik latar -->
+<audio id="bgm" loop>
+  <source src="https://www.geocities.ws/conge/musikislami.mp3" type="audio/mpeg">
+  Browser Anda tidak mendukung audio.
+</audio>
+
+<div class="book" id="book">
+  <!-- Cover depan -->
+  <div class="page cover" data-page="0">
+    <img src="https://teddymutadi.github.io/album-haji/29.png" alt="Cover Buku">
+  </div>
+
+  <!-- Halaman 1 -->
+<div class="page" data-page="1">
+  <img src="https://teddymutadi.github.io/album-haji/30.png" alt="Halaman 1">
+</div>
+
+<!-- Halaman 2 -->
+<div class="page" data-page="2">
+  <img src="https://teddymutadi.github.io/album-haji/31.png" alt="Halaman 2">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/32.png" alt="Halaman 4">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/33.png" alt="Halaman 4">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/34.png" alt="Halaman 4">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/35.png" alt="Halaman 4">
+</div>
+
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/36.png" alt="Halaman 4">
+</div>
+
+ <!-- Halaman 1 -->
+<div class="page" data-page="1">
+  <img src="https://teddymutadi.github.io/album-haji/37.png" alt="Halaman 1">
+</div>
+
+<!-- Halaman 2 -->
+<div class="page" data-page="2">
+  <img src="https://teddymutadi.github.io/album-haji/38.png" alt="mutadi">
+</div>
+
+<!-- Halaman 3 -->
+<div class="page" data-page="3">
+  <img src="https://teddymutadi.github.io/album-haji/39.png" alt="Halaman 3">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/40.png" alt="Halaman 4">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/41.png" alt="Halaman 4">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/42.png" alt="Halaman 4">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/43.png" alt="Halaman 4">
+</div>
+
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/44.png" alt="Halaman 4">
+</div>
+
+<!-- Halaman 2 -->
+<div class="page" data-page="2">
+  <img src="https://teddymutadi.github.io/album-haji/45.png" alt="Halaman 2">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/46.png" alt="Halaman 4">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/47.png" alt="Halaman 4">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/48.png" alt="Halaman 4">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/49.png" alt="Halaman 4">
+</div>
+
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/50.png" alt="Halaman 4">
+</div>
+
+ <!-- Halaman 1 -->
+<div class="page" data-page="1">
+  <img src="https://teddymutadi.github.io/album-haji/51.png" alt="Halaman 1">
+</div>
+
+<!-- Halaman 2 -->
+<div class="page" data-page="2">
+  <img src="https://teddymutadi.github.io/album-haji/52.png" alt="Halaman 2">
+</div>
+
+<!-- Halaman 3 -->
+<div class="page" data-page="3">
+  <img src="https://teddymutadi.github.io/album-haji/53.png" alt="Halaman 3">
+</div>
+
+<!-- Halaman 4 -->
+<div class="page" data-page="4">
+  <img src="https://teddymutadi.github.io/album-haji/54.png" alt="Halaman 4">
+</div>
+
+
+  <!-- Back cover -->
+  <div class="page back-cover" data-page="10"></div>
+</div>
+
+<script>
+  const audio = document.getElementById("bgm");
+  const pages = document.querySelectorAll(".page");
+  let zIndexCounter = 1;
+
+  // Musik mulai setelah klik pertama
+  document.body.addEventListener("click", () => {
+    if (audio.paused) {
+      audio.play().catch(() => {});
+    }
+  }, { once: true });
+
+  // Urutan halaman agar cover di depan
+  pages.forEach((page, index) => {
+    page.style.zIndex = pages.length - index;
+  });
+
+  // Efek buka halaman
+  pages.forEach((page) => {
+    page.addEventListener("click", () => {
+      if (!page.classList.contains("flipped")) {
+        page.style.transform = "rotateY(-180deg)";
+        page.classList.add("flipped");
+        page.style.zIndex = ++zIndexCounter;
+
+        // Hentikan musik saat back cover dibuka
+        if (page.classList.contains("back-cover")) {
+          audio.pause();
+          audio.currentTime = 0;
+        }
+      } else {
+        page.style.transform = "rotateY(0deg)";
+        page.classList.remove("flipped");
+        page.style.zIndex = ++zIndexCounter;
+      }
+    });
+  });
+</script>
+
+<script>
+  const bgm = document.getElementById("bgm");
+  bgm.volume = 0.5;  // Volume musik latar sedang
+</script>
+
+</body>
+</html>
